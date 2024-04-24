@@ -18,11 +18,9 @@ import ViewQueries from "./Components/Admin/ViewQueries.jsx";
 
 import "./App.css";
 function App() {
-  localStorage.setItem("user", "admin");
-  // localStorage.setItem("user", "abc");
-  // useEffect (() => {
-  //   localStorage.clear();
-  // }, [])
+  // localStorage.setItem("user", "admin");
+  // localStorage.clear();
+  localStorage.setItem("user", "abc");
   
   return (
     <div className="mainRoot">

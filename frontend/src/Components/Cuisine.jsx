@@ -23,7 +23,7 @@ function Cuisine() {
 
   const getFood = async () => {
     try {
-      const result = await axios.get("http://localhost:4000/plateform/food-list");
+      const result = await axios.get("http://localhost:4000/plateform/food-list",{withCredentials: true});
       setFoodList(result.data.data);
     } catch (error) {
       console.error("Error fetching food data:", error);

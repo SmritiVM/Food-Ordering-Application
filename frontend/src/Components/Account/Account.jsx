@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
 import EditProfile from './EditProfile';
 import OrderHistory from './OrderHistory';
 
@@ -15,9 +15,16 @@ function Account(){
     setActiveTab(tab);
   };
 
-  const logout = () => {
-    alert("Logged out!");
-    navigate("/");
+  const logout = async(e) => {
+    e.preventDefault();
+    try{
+      const response= await axios.get("http://localhost:4000/plateform/logout",{withCredentials:true});
+    }
+    catch(err){
+      alert("Error Logging out, Try again after some time");
+      console.log("Error Loggging out:",err);
+    }
+    navigate("/login");
   }
   return (
     <div className="account-page">

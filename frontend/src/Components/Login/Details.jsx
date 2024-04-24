@@ -84,37 +84,13 @@ function DetailsForm(props) {
       });
       const data=await response.data;
       console.log("Data",data);
-      // console.log('Form submitted:', formData);
+      console.log('Form submitted:', formData);
       navigate("/")
     }
     catch(error){ 
       console.log(error);
       alert("Could not create user");
     }
-
-  //   if(props.action === "create"){
-  //     const result = await axios.post(
-  //     "http://localhost:4000/plateform/create-user",
-  //     formDataToSend,
-  //     {
-  //         headers: { "Content-Type": "multipart/form"}
-  //     }
-  //     )
-  //     alert("Food Item Created Successfully");
-  //     navigate("/")
-  // }
-  // else if (props.action === "update") {
-  //     // Update request
-  //     await axios.put(
-  //         `http://localhost:4000/plateform/update-food/${props.foodID}`, 
-  //         formDataToSend,
-  //         { headers: { "Content-Type": "multipart/form-data" } }
-  //     );
-  //     alert("Food Item Updated");
-  //     navigate("/")
-  // }
-  // };
-    // If validation passes, proceed with form submission
   };
 
   return (
