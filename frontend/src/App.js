@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Cart from "./Components/Cart/Cart";
 import Navbar from "./Components/Navbar";
 import Cuisine from "./Components/Cuisine";
-import { SearchProvider } from "./Components/SearchContext.js";
+import { SearchProvider } from "./Components/SearchContext.jsx";
 
 import Account from "./Components/Account/Account";
 import Login from "./Components/Login/Login";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useSearchContext } from "./SearchContext.js";
+import { useSearchContext } from "./SearchContext.jsx";
 import { CreateFoodCard } from "./FoodCard.jsx";
 import ContactSection from "./Contact/Contact.jsx";
 import "./styles/Cuisine.css";
