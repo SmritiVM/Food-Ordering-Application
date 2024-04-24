@@ -32,7 +32,7 @@ const adminAction = [
         actionName: "Help Requests",
         imgUrl: "./images/admin/HelpRequests.jpeg",
         desc: "View pending Help Requests",
-        link: "/"
+        link: "/admin/viewqueries"
     },
 
     {

@@ -14,11 +14,12 @@ import Admin from "./Components/Admin.jsx";
 import CreateFood from "./Components/Admin/CreateFood";
 import UpdateFood from "./Components/Admin/UpdateFood.jsx";
 import ViewOrders from "./Components/Admin/ViewOrders.jsx";
+import ViewQueries from "./Components/Admin/ViewQueries.jsx";
 
 import "./App.css";
 function App() {
-  // localStorage.setItem("user", "admin");
-  localStorage.setItem("user", "abc");
+  localStorage.setItem("user", "admin");
+  // localStorage.setItem("user", "abc");
   // useEffect (() => {
   //   localStorage.clear();
   // }, [])
@@ -41,6 +42,7 @@ function App() {
           <Route path = "/admin/updatefood" element={<UpdateFood/>}/>
           <Route path = "/admin/vieworders" element={<ViewOrders/>}/>
           <Route path = "/admin/:adminAction" element={<Cuisine/>}/>
+          <Route path = "/admin/viewqueries" element={<ViewQueries/>}/>
         </Routes>
         </SearchProvider>
       </Router>

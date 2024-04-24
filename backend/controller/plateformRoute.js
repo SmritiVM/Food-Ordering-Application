@@ -279,4 +279,14 @@ plateformRoute.post('/submit-query', async (req, res) => {
     }
 });
 
+plateformRoute.get("/query-list", async(req, res) => {
+    try{
+        querySchema.find({}).then(data => {
+            res.send({status: "ok", data: data})
+        })
+    }
+    catch(error){
+        res.json({ status: error});
+    }
+})
 module.exports = plateformRoute;
