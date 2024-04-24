@@ -1,7 +1,10 @@
 const express = require("express");
+
 const userSchema = require("../model/userSchema");
 const foodSchema = require("../model/foodSchema");
 const orderSchema = require("../model/orderSchema");
+const querySchema = require("../model/querySchema");
+
 const plateformRoute = express.Router();
 const mongoose = require("mongoose");
 const multer = require('multer');
@@ -254,6 +257,26 @@ plateformRoute.get("/set-cookies", async (req,res)=>{
     // alert("cookies set");
 })
 
+// ------------------------------------------------------------------------------------
+// Queries
+plateformRoute.post('/submit-query', async (req, res) => {
+    const { name, email, message } = req.body;
+    try {
+        
 
+        const query = await querySchema.create({
+            name,
+            email,
+            message
+        });
+
+        
+
+        res.status(201).json({ status: 'success', data: query });
+    } catch (error) {
+        console.error('Error submitting query:', error);
+        res.status(500).json({ status: 'error', message: 'Internal server error' });
+    }
+});
 
 module.exports = plateformRoute;
