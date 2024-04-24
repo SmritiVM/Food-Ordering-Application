@@ -166,7 +166,7 @@ plateformRoute.get("/search-food", async (req, res) => {
   
 // --------------------------------------------------------------
 // Order
-plateformRoute.post('/place-order', requireAuth, async (req, res) => {
+plateformRoute.post('/place-order', async (req, res) => {
     const { userId, items, total } = req.body;
 
     try {
